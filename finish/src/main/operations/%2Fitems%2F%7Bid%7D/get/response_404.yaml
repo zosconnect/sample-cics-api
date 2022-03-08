@@ -1,0 +1,7 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "Item not found"
+version: 1

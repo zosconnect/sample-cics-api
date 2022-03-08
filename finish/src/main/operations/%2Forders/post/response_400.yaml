@@ -1,0 +1,7 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "Insuffienct stock to complete order"
+version: 1

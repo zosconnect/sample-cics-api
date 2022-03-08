@@ -1,0 +1,31 @@
+apiVersion: 1.0.0
+metadata:
+  name: sample-cics-api
+projects:
+  - name: catalog-manager-api
+    source:
+      location: 'https://github.com/zosconnect/sample-cics-api.git'
+      type: github
+      branch: main
+      sparseCheckoutDir: start
+components:
+  - mountSources: true
+    endpoints:
+      - attributes:
+          cookiesAuthEnabled: 'true'
+          public: 'true'
+          path: /zosConnect/designer/
+          secure: 'true'
+        name: zosconnect-ui-endpoint
+        port: 9080
+    env:
+      - name: ZCON_DESIGNER_PROJECT
+        value: /projects/catalog-manager-api/start
+    memoryLimit: 4927M
+    type: dockerimage
+    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.55'
+    alias: zosconnect
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: redhat/vscode-xml/latest
+    type: chePlugin

@@ -1,0 +1,7 @@
+---
+mappings:
+- body:
+    mappings:
+    - message:
+        template: "{{$zosAssetResponse.commarea.catalog.\"CA-RESPONSE-MESSAGE\"}}"
+version: 1
