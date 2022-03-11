@@ -1,0 +1,14 @@
+---
+mappings:
+- commarea:
+    mappings:
+    - catalog:
+        mappings:
+        - CA-REQUEST-ID:
+            template: "01ORDR"
+        - CA-ORDER-REQUEST:
+            mappings:
+            - CA-QUANTITY-REQ:
+                expression: "$queryParameters.quantity"
+            - CA-ITEM-REF-NUMBER:
+                expression: "$queryParameters.itemNumber"

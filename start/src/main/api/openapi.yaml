@@ -1,0 +1,208 @@
+openapi: 3.0.0
+info:
+  title: CatalogManagerApi
+  description: Manage a catalog through an API for CICS.
+  version: '1.1'
+  license:
+    name: Apache-2.0
+    url: https://opensource.org/licenses/Apache-2.0
+servers:
+  - url: /project
+  - url: http://localhost:9080/
+  - url: https://localhost:9443/
+security:
+  - BasicAuth: []
+  - BearerAuth: []
+paths:
+  /items:
+    get:
+      tags:
+        - Catalog
+      summary: Get items in the catalog
+      description: Uses the catalogProgram CICS COMMAREA z/OS asset
+      operationId: itemsGet
+      parameters:
+        - $ref: '#/components/parameters/startItemID'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /items/{id}:
+    get:
+      tags:
+        - Catalog
+      summary: Get an item from the catalog
+      description: Uses the catalogProgram CICS COMMAREA z/OS asset
+      operationId: itemsIdGet
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogItemResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                example:
+                  message: Item could not be found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                example:
+                  message: A message describing the error
+  /orders:
+    post:
+      tags:
+        - Catalog
+      summary: Place an order for an item
+      description: Uses the catalogProgram CICS COMMAREA z/OS asset
+      operationId: ordersPost
+      parameters:
+        - $ref: '#/components/parameters/itemNumber'
+        - $ref: '#/components/parameters/quantity'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+      example:
+        message: A message describing the error
+    CatalogResponse:
+      type: object
+      properties:
+        totalItems:
+          type: integer
+          minimum: 0
+          maximum: 999
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CatalogItemResponse'
+    CatalogItemResponse:
+      type: object
+      properties:
+        summary:
+          type: object
+          properties:
+            stock:
+              type: string
+              maxLength: 150
+              example: Department 10 has 56 'Ball Pens Red 24pk' in stock.
+            orders:
+              type: string
+              maxLength: 300
+              example: '10 ''Ball Pens Red 24pk'' on order at price $2.9. Total orders value: $29.'
+        information:
+          type: object
+          properties:
+            itemReference:
+              type: integer
+              minimum: 0
+              maximum: 9999
+            description:
+              type: string
+              maxLength: 40
+            cost:
+              type: string
+              maxLength: 6
+            department:
+              type: integer
+              minimum: 0
+              maximum: 999
+            stock:
+              type: integer
+              minimum: 0
+              maximum: 9999
+            onOrder:
+              type: integer
+              minimum: 0
+              maximum: 999
+  parameters:
+    id:
+      name: id
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    startItemID:
+      name: startItemID
+      in: query
+      required: true
+      style: form
+      explode: true
+      schema:
+        type: string
+    itemNumber:
+      name: itemNumber
+      in: query
+      required: true
+      style: form
+      explode: true
+      schema:
+        type: string
+    quantity:
+      name: quantity
+      in: query
+      required: true
+      style: form
+      explode: true
+      schema:
+        type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

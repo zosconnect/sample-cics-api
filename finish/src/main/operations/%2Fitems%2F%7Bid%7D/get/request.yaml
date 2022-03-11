@@ -1,0 +1,12 @@
+---
+mappings:
+- commarea:
+    mappings:
+    - catalog:
+        mappings:
+        - CA-REQUEST-ID:
+            template: "01INQS"
+        - CA-INQUIRE-SINGLE:
+            mappings:
+            - CA-ITEM-REF-REQ:
+                expression: "$pathParameters.id"
