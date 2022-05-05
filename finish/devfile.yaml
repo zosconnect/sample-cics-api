@@ -7,7 +7,7 @@ projects:
       location: 'https://github.com/zosconnect/sample-cics-api.git'
       type: github
       branch: main
-      sparseCheckoutDir: start
+      sparseCheckoutDir: finish
 components:
   - mountSources: true
     endpoints:
@@ -20,10 +20,10 @@ components:
         port: 9080
     env:
       - name: ZCON_DESIGNER_PROJECT
-        value: /projects/catalog-manager-api/start
+        value: /projects/catalog-manager-api/finish
     memoryLimit: 4927M
     type: dockerimage
-    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.55'
+    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.56'
     alias: zosconnect
   - id: redhat/vscode-yaml/latest
     type: chePlugin
