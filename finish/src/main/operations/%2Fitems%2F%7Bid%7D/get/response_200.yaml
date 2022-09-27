@@ -5,38 +5,38 @@ mappings:
     - information:
         mappings:
         - itemReference:
-            expression: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-ITEM-REF\""
         - description:
-            template: "{{$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}"
         - cost:
-            template: "{{$number($zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            template: "{{$number($zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\")}}"
         - department:
-            expression: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\""
         - stock:
-            expression: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\""
         - onOrder:
-            expression: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\""
     - summary:
         mappings:
         - stock:
-            template: "Department {{$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\"}} has {{$zosAssetResponse.commarea.catalog.\"\
-              CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\"}} '{{$zosAssetResponse.commarea.catalog.\"\
+            template: "Department {{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\"}} has {{$zosAssetResponse.commarea.DFH0XCP1.\"\
+              CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\"}} '{{$zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}' in\
               \ stock."
         - orders:
-            template: "{{$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\"}} '{{$zosAssetResponse.commarea.catalog.\"\
+            template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\"}} '{{$zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}' on\
-              \ order at unit price ${{$number($zosAssetResponse.commarea.catalog.\"\
+              \ order at unit price ${{$number($zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\")}}. Total order\
-              \ value: ${{$number($zosAssetResponse.commarea.catalog.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\") * $number($zosAssetResponse.commarea.catalog.\"\
+              \ value: ${{$number($zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\") * $number($zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\")}}"
 version: 1

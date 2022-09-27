@@ -2,7 +2,7 @@
 mappings:
 - commarea:
     mappings:
-    - catalog:
+    - DFH0XCP1:
         mappings:
         - CA-REQUEST-ID:
             template: "01ORDR"

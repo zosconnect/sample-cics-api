@@ -3,6 +3,6 @@ mappings:
 - body:
     mappings:
     - message:
-        template: "{{$error.message}}{{$zosAssetResponse.commarea.catalog.\"CA-RESPONSE-MESSAGE\"\
+        template: "{{$error.message}}{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-RESPONSE-MESSAGE\"\
           }}"
 version: 1

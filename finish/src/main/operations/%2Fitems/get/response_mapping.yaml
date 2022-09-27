@@ -1,7 +1,7 @@
 ---
 version: 1
 response_200.yaml:
-  condition: "$zosAssetResponse.commarea.catalog.\"CA-RETURN-CODE\" = 0"
+  condition: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-RETURN-CODE\" = 0"
   httpStatusCode: 200
 response_500.yaml:
   condition: true
