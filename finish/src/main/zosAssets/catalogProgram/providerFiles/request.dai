@@ -2,18 +2,18 @@
 <ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" direction="0">
     <message id="1">
         <segment id="1">
-            <field name="catalog" originalName="catalog" included="Y" path="catalog" fileName="catalog.cpy" structureIndex="0" structSrcFileName="catalog.cpy" srcLine="01 catalog.">
+            <field name="DFH0XCP1" originalName="DFH0XCP1" included="Y" path="DFH0XCP1" fileName="DFH0XCP1.cpy" structureIndex="0" structSrcFileName="DFH0XCP1.cpy" srcLine="01 DFH0XCP1.">
                 <startPos>1</startPos>
                 <bytes>998</bytes>
                 <maxBytes>998</maxBytes>
                 <applicationDatatype datatype="STRUCT"/>
-                <field name="CA-REQUEST-ID" originalName="CA-REQUEST-ID" included="Y" path="catalog.CA-REQUEST-ID" srcLine="03 CA-REQUEST-ID PIC X(6) USAGE DISPLAY.">
+                <field name="CA-REQUEST-ID" originalName="CA-REQUEST-ID" included="Y" path="DFH0XCP1.CA-REQUEST-ID" srcLine="03 CA-REQUEST-ID PIC X(6) USAGE DISPLAY.">
                     <startPos>1</startPos>
                     <bytes>6</bytes>
                     <maxBytes>6</maxBytes>
                     <applicationDatatype datatype="CHAR"/>
                 </field>
-                <field name="CA-RETURN-CODE" originalName="CA-RETURN-CODE" included="Y" path="catalog.CA-RETURN-CODE" srcLine="03 CA-RETURN-CODE PIC 9(2) USAGE DISPLAY.">
+                <field name="CA-RETURN-CODE" originalName="CA-RETURN-CODE" included="Y" path="DFH0XCP1.CA-RETURN-CODE" srcLine="03 CA-RETURN-CODE PIC 9(2) USAGE DISPLAY.">
                     <startPos>7</startPos>
                     <bytes>2</bytes>
                     <maxBytes>2</maxBytes>
@@ -22,24 +22,24 @@
                     </marshaller>
                     <applicationDatatype datatype="DECIMAL" precision="2" scale="0"/>
                 </field>
-                <field name="CA-RESPONSE-MESSAGE" originalName="CA-RESPONSE-MESSAGE" included="Y" path="catalog.CA-RESPONSE-MESSAGE" srcLine="03 CA-RESPONSE-MESSAGE PIC X(79) USAGE DISPLAY.">
+                <field name="CA-RESPONSE-MESSAGE" originalName="CA-RESPONSE-MESSAGE" included="Y" path="DFH0XCP1.CA-RESPONSE-MESSAGE" srcLine="03 CA-RESPONSE-MESSAGE PIC X(79) USAGE DISPLAY.">
                     <startPos>9</startPos>
                     <bytes>79</bytes>
                     <maxBytes>79</maxBytes>
                     <applicationDatatype datatype="CHAR"/>
                 </field>
-                <field name="CA-REQUEST-SPECIFIC" originalName="CA-REQUEST-SPECIFIC" included="Y" path="catalog.CA-REQUEST-SPECIFIC" srcLine="03 CA-REQUEST-SPECIFIC PIC X(911) USAGE DISPLAY.">
+                <field name="CA-REQUEST-SPECIFIC" originalName="CA-REQUEST-SPECIFIC" included="Y" path="DFH0XCP1.CA-REQUEST-SPECIFIC" srcLine="03 CA-REQUEST-SPECIFIC PIC X(911) USAGE DISPLAY.">
                     <startPos>88</startPos>
                     <bytes>911</bytes>
                     <maxBytes>911</maxBytes>
                     <applicationDatatype datatype="CHAR"/>
                 </field>
-                <field name="CA-INQUIRE-REQUEST" originalName="CA-INQUIRE-REQUEST" included="Y" path="catalog.CA-INQUIRE-REQUEST" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-INQUIRE-REQUEST REDEFINES CA-REQUEST-SPECIFIC.">
+                <field name="CA-INQUIRE-REQUEST" originalName="CA-INQUIRE-REQUEST" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-INQUIRE-REQUEST REDEFINES CA-REQUEST-SPECIFIC.">
                     <startPos>88</startPos>
                     <bytes>911</bytes>
                     <maxBytes>911</maxBytes>
                     <applicationDatatype datatype="STRUCT"/>
-                    <field name="CA-LIST-START-REF" originalName="CA-LIST-START-REF" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-LIST-START-REF" srcLine="05 CA-LIST-START-REF PIC 9(4) USAGE DISPLAY.">
+                    <field name="CA-LIST-START-REF" originalName="CA-LIST-START-REF" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-LIST-START-REF" srcLine="05 CA-LIST-START-REF PIC 9(4) USAGE DISPLAY.">
                         <startPos>88</startPos>
                         <bytes>4</bytes>
                         <maxBytes>4</maxBytes>
@@ -48,7 +48,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                     </field>
-                    <field name="CA-LAST-ITEM-REF" originalName="CA-LAST-ITEM-REF" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-LAST-ITEM-REF" srcLine="05 CA-LAST-ITEM-REF PIC 9(4) USAGE DISPLAY.">
+                    <field name="CA-LAST-ITEM-REF" originalName="CA-LAST-ITEM-REF" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-LAST-ITEM-REF" srcLine="05 CA-LAST-ITEM-REF PIC 9(4) USAGE DISPLAY.">
                         <startPos>92</startPos>
                         <bytes>4</bytes>
                         <maxBytes>4</maxBytes>
@@ -57,7 +57,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                     </field>
-                    <field name="CA-ITEM-COUNT" originalName="CA-ITEM-COUNT" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-ITEM-COUNT" srcLine="05 CA-ITEM-COUNT PIC 9(3) USAGE DISPLAY.">
+                    <field name="CA-ITEM-COUNT" originalName="CA-ITEM-COUNT" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-ITEM-COUNT" srcLine="05 CA-ITEM-COUNT PIC 9(3) USAGE DISPLAY.">
                         <startPos>96</startPos>
                         <bytes>3</bytes>
                         <maxBytes>3</maxBytes>
@@ -66,19 +66,19 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                     </field>
-                    <field name="CA-INQUIRY-RESPONSE-DATA" originalName="CA-INQUIRY-RESPONSE-DATA" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-INQUIRY-RESPONSE-DATA" srcLine="05 CA-INQUIRY-RESPONSE-DATA PIC X(900) USAGE DISPLAY.">
+                    <field name="CA-INQUIRY-RESPONSE-DATA" originalName="CA-INQUIRY-RESPONSE-DATA" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-INQUIRY-RESPONSE-DATA" srcLine="05 CA-INQUIRY-RESPONSE-DATA PIC X(900) USAGE DISPLAY.">
                         <startPos>99</startPos>
                         <bytes>900</bytes>
                         <maxBytes>900</maxBytes>
                         <applicationDatatype datatype="CHAR"/>
                     </field>
-                    <field name="CA-CAT-ITEM" originalName="CA-CAT-ITEM" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM" redefines="CA-INQUIRY-RESPONSE-DATA" minOccurs="15" maxOccurs="15" srcLine="05 CA-CAT-ITEM REDEFINES CA-INQUIRY-RESPONSE-DATA OCCURS 15 TIMES.">
+                    <field name="CA-CAT-ITEM" originalName="CA-CAT-ITEM" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM" redefines="CA-INQUIRY-RESPONSE-DATA" minOccurs="15" maxOccurs="15" srcLine="05 CA-CAT-ITEM REDEFINES CA-INQUIRY-RESPONSE-DATA OCCURS 15 TIMES.">
                         <startPos>99</startPos>
                         <bytes>900</bytes>
                         <maxBytes>900</maxBytes>
                         <marshaller alignment="NATURAL"/>
                         <applicationDatatype datatype="ARRAY"/>
-                        <field name="CA-ITEM-REF" originalName="CA-ITEM-REF" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-ITEM-REF" srcLine="07 CA-ITEM-REF PIC 9(4) USAGE DISPLAY.">
+                        <field name="CA-ITEM-REF" originalName="CA-ITEM-REF" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-ITEM-REF" srcLine="07 CA-ITEM-REF PIC 9(4) USAGE DISPLAY.">
                             <bytes>4</bytes>
                             <maxBytes>4</maxBytes>
                             <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
@@ -86,12 +86,12 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                         </field>
-                        <field name="CA-DESCRIPTION" originalName="CA-DESCRIPTION" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-DESCRIPTION" srcLine="07 CA-DESCRIPTION PIC X(40) USAGE DISPLAY.">
+                        <field name="CA-DESCRIPTION" originalName="CA-DESCRIPTION" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-DESCRIPTION" srcLine="07 CA-DESCRIPTION PIC X(40) USAGE DISPLAY.">
                             <bytes>40</bytes>
                             <maxBytes>40</maxBytes>
                             <applicationDatatype datatype="CHAR"/>
                         </field>
-                        <field name="CA-DEPARTMENT" originalName="CA-DEPARTMENT" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-DEPARTMENT" srcLine="07 CA-DEPARTMENT PIC 9(3) USAGE DISPLAY.">
+                        <field name="CA-DEPARTMENT" originalName="CA-DEPARTMENT" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-DEPARTMENT" srcLine="07 CA-DEPARTMENT PIC 9(3) USAGE DISPLAY.">
                             <bytes>3</bytes>
                             <maxBytes>3</maxBytes>
                             <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
@@ -99,12 +99,12 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                         </field>
-                        <field name="CA-COST" originalName="CA-COST" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-COST" srcLine="07 CA-COST PIC X(6) USAGE DISPLAY.">
+                        <field name="CA-COST" originalName="CA-COST" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.CA-COST" srcLine="07 CA-COST PIC X(6) USAGE DISPLAY.">
                             <bytes>6</bytes>
                             <maxBytes>6</maxBytes>
                             <applicationDatatype datatype="CHAR"/>
                         </field>
-                        <field name="IN-STOCK" originalName="IN-STOCK" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.IN-STOCK" srcLine="07 IN-STOCK PIC 9(4) USAGE DISPLAY.">
+                        <field name="IN-STOCK" originalName="IN-STOCK" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.IN-STOCK" srcLine="07 IN-STOCK PIC 9(4) USAGE DISPLAY.">
                             <bytes>4</bytes>
                             <maxBytes>4</maxBytes>
                             <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
@@ -112,7 +112,7 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                         </field>
-                        <field name="ON-ORDER" originalName="ON-ORDER" included="Y" path="catalog.CA-INQUIRE-REQUEST.CA-CAT-ITEM.ON-ORDER" srcLine="07 ON-ORDER PIC 9(3) USAGE DISPLAY.">
+                        <field name="ON-ORDER" originalName="ON-ORDER" included="Y" path="DFH0XCP1.CA-INQUIRE-REQUEST.CA-CAT-ITEM.ON-ORDER" srcLine="07 ON-ORDER PIC 9(3) USAGE DISPLAY.">
                             <bytes>3</bytes>
                             <maxBytes>3</maxBytes>
                             <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
@@ -122,12 +122,12 @@
                         </field>
                     </field>
                 </field>
-                <field name="CA-INQUIRE-SINGLE" originalName="CA-INQUIRE-SINGLE" included="Y" path="catalog.CA-INQUIRE-SINGLE" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-INQUIRE-SINGLE REDEFINES CA-REQUEST-SPECIFIC.">
+                <field name="CA-INQUIRE-SINGLE" originalName="CA-INQUIRE-SINGLE" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-INQUIRE-SINGLE REDEFINES CA-REQUEST-SPECIFIC.">
                     <startPos>88</startPos>
                     <bytes>911</bytes>
                     <maxBytes>911</maxBytes>
                     <applicationDatatype datatype="STRUCT"/>
-                    <field name="CA-ITEM-REF-REQ" originalName="CA-ITEM-REF-REQ" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-ITEM-REF-REQ" srcLine="05 CA-ITEM-REF-REQ PIC 9(4) USAGE DISPLAY.">
+                    <field name="CA-ITEM-REF-REQ" originalName="CA-ITEM-REF-REQ" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-ITEM-REF-REQ" srcLine="05 CA-ITEM-REF-REQ PIC 9(4) USAGE DISPLAY.">
                         <startPos>88</startPos>
                         <bytes>4</bytes>
                         <maxBytes>4</maxBytes>
@@ -136,7 +136,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                     </field>
-                    <field name="fill_0" originalName="fill_0" included="Y" path="catalog.CA-INQUIRE-SINGLE.fill_0" srcLine="05 FILLER PIC 9(4) USAGE DISPLAY.">
+                    <field name="fill_0" originalName="fill_0" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.fill_0" srcLine="05 FILLER PIC 9(4) USAGE DISPLAY.">
                         <startPos>92</startPos>
                         <bytes>4</bytes>
                         <maxBytes>4</maxBytes>
@@ -145,7 +145,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                     </field>
-                    <field name="fill_1" originalName="fill_1" included="Y" path="catalog.CA-INQUIRE-SINGLE.fill_1" srcLine="05 FILLER PIC 9(3) USAGE DISPLAY.">
+                    <field name="fill_1" originalName="fill_1" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.fill_1" srcLine="05 FILLER PIC 9(3) USAGE DISPLAY.">
                         <startPos>96</startPos>
                         <bytes>3</bytes>
                         <maxBytes>3</maxBytes>
@@ -154,12 +154,12 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                     </field>
-                    <field name="CA-SINGLE-ITEM" originalName="CA-SINGLE-ITEM" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM" srcLine="05 CA-SINGLE-ITEM.">
+                    <field name="CA-SINGLE-ITEM" originalName="CA-SINGLE-ITEM" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM" srcLine="05 CA-SINGLE-ITEM.">
                         <startPos>99</startPos>
                         <bytes>60</bytes>
                         <maxBytes>60</maxBytes>
                         <applicationDatatype datatype="STRUCT"/>
-                        <field name="CA-SNGL-ITEM-REF" originalName="CA-SNGL-ITEM-REF" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-ITEM-REF" srcLine="07 CA-SNGL-ITEM-REF PIC 9(4) USAGE DISPLAY.">
+                        <field name="CA-SNGL-ITEM-REF" originalName="CA-SNGL-ITEM-REF" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-ITEM-REF" srcLine="07 CA-SNGL-ITEM-REF PIC 9(4) USAGE DISPLAY.">
                             <startPos>99</startPos>
                             <bytes>4</bytes>
                             <maxBytes>4</maxBytes>
@@ -168,13 +168,13 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                         </field>
-                        <field name="CA-SNGL-DESCRIPTION" originalName="CA-SNGL-DESCRIPTION" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-DESCRIPTION" srcLine="07 CA-SNGL-DESCRIPTION PIC X(40) USAGE DISPLAY.">
+                        <field name="CA-SNGL-DESCRIPTION" originalName="CA-SNGL-DESCRIPTION" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-DESCRIPTION" srcLine="07 CA-SNGL-DESCRIPTION PIC X(40) USAGE DISPLAY.">
                             <startPos>103</startPos>
                             <bytes>40</bytes>
                             <maxBytes>40</maxBytes>
                             <applicationDatatype datatype="CHAR"/>
                         </field>
-                        <field name="CA-SNGL-DEPARTMENT" originalName="CA-SNGL-DEPARTMENT" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-DEPARTMENT" srcLine="07 CA-SNGL-DEPARTMENT PIC 9(3) USAGE DISPLAY.">
+                        <field name="CA-SNGL-DEPARTMENT" originalName="CA-SNGL-DEPARTMENT" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-DEPARTMENT" srcLine="07 CA-SNGL-DEPARTMENT PIC 9(3) USAGE DISPLAY.">
                             <startPos>143</startPos>
                             <bytes>3</bytes>
                             <maxBytes>3</maxBytes>
@@ -183,13 +183,13 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                         </field>
-                        <field name="CA-SNGL-COST" originalName="CA-SNGL-COST" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-COST" srcLine="07 CA-SNGL-COST PIC X(6) USAGE DISPLAY.">
+                        <field name="CA-SNGL-COST" originalName="CA-SNGL-COST" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.CA-SNGL-COST" srcLine="07 CA-SNGL-COST PIC X(6) USAGE DISPLAY.">
                             <startPos>146</startPos>
                             <bytes>6</bytes>
                             <maxBytes>6</maxBytes>
                             <applicationDatatype datatype="CHAR"/>
                         </field>
-                        <field name="IN-SNGL-STOCK" originalName="IN-SNGL-STOCK" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.IN-SNGL-STOCK" srcLine="07 IN-SNGL-STOCK PIC 9(4) USAGE DISPLAY.">
+                        <field name="IN-SNGL-STOCK" originalName="IN-SNGL-STOCK" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.IN-SNGL-STOCK" srcLine="07 IN-SNGL-STOCK PIC 9(4) USAGE DISPLAY.">
                             <startPos>152</startPos>
                             <bytes>4</bytes>
                             <maxBytes>4</maxBytes>
@@ -198,7 +198,7 @@
                             </marshaller>
                             <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                         </field>
-                        <field name="ON-SNGL-ORDER" originalName="ON-SNGL-ORDER" included="Y" path="catalog.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.ON-SNGL-ORDER" srcLine="07 ON-SNGL-ORDER PIC 9(3) USAGE DISPLAY.">
+                        <field name="ON-SNGL-ORDER" originalName="ON-SNGL-ORDER" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.CA-SINGLE-ITEM.ON-SNGL-ORDER" srcLine="07 ON-SNGL-ORDER PIC 9(3) USAGE DISPLAY.">
                             <startPos>156</startPos>
                             <bytes>3</bytes>
                             <maxBytes>3</maxBytes>
@@ -208,31 +208,31 @@
                             <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                         </field>
                     </field>
-                    <field name="fill_2" originalName="fill_2" included="Y" path="catalog.CA-INQUIRE-SINGLE.fill_2" srcLine="05 FILLER PIC X(840) USAGE DISPLAY.">
+                    <field name="fill_2" originalName="fill_2" included="Y" path="DFH0XCP1.CA-INQUIRE-SINGLE.fill_2" srcLine="05 FILLER PIC X(840) USAGE DISPLAY.">
                         <startPos>159</startPos>
                         <bytes>840</bytes>
                         <maxBytes>840</maxBytes>
                         <applicationDatatype datatype="CHAR"/>
                     </field>
                 </field>
-                <field name="CA-ORDER-REQUEST" originalName="CA-ORDER-REQUEST" included="Y" path="catalog.CA-ORDER-REQUEST" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-ORDER-REQUEST REDEFINES CA-REQUEST-SPECIFIC.">
+                <field name="CA-ORDER-REQUEST" originalName="CA-ORDER-REQUEST" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST" redefines="CA-REQUEST-SPECIFIC" srcLine="03 CA-ORDER-REQUEST REDEFINES CA-REQUEST-SPECIFIC.">
                     <startPos>88</startPos>
                     <bytes>911</bytes>
                     <maxBytes>911</maxBytes>
                     <applicationDatatype datatype="STRUCT"/>
-                    <field name="CA-USERID" originalName="CA-USERID" included="Y" path="catalog.CA-ORDER-REQUEST.CA-USERID" srcLine="05 CA-USERID PIC X(8) USAGE DISPLAY.">
+                    <field name="CA-USERID" originalName="CA-USERID" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST.CA-USERID" srcLine="05 CA-USERID PIC X(8) USAGE DISPLAY.">
                         <startPos>88</startPos>
                         <bytes>8</bytes>
                         <maxBytes>8</maxBytes>
                         <applicationDatatype datatype="CHAR"/>
                     </field>
-                    <field name="CA-CHARGE-DEPT" originalName="CA-CHARGE-DEPT" included="Y" path="catalog.CA-ORDER-REQUEST.CA-CHARGE-DEPT" srcLine="05 CA-CHARGE-DEPT PIC X(8) USAGE DISPLAY.">
+                    <field name="CA-CHARGE-DEPT" originalName="CA-CHARGE-DEPT" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST.CA-CHARGE-DEPT" srcLine="05 CA-CHARGE-DEPT PIC X(8) USAGE DISPLAY.">
                         <startPos>96</startPos>
                         <bytes>8</bytes>
                         <maxBytes>8</maxBytes>
                         <applicationDatatype datatype="CHAR"/>
                     </field>
-                    <field name="CA-ITEM-REF-NUMBER" originalName="CA-ITEM-REF-NUMBER" included="Y" path="catalog.CA-ORDER-REQUEST.CA-ITEM-REF-NUMBER" srcLine="05 CA-ITEM-REF-NUMBER PIC 9(4) USAGE DISPLAY.">
+                    <field name="CA-ITEM-REF-NUMBER" originalName="CA-ITEM-REF-NUMBER" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST.CA-ITEM-REF-NUMBER" srcLine="05 CA-ITEM-REF-NUMBER PIC 9(4) USAGE DISPLAY.">
                         <startPos>104</startPos>
                         <bytes>4</bytes>
                         <maxBytes>4</maxBytes>
@@ -241,7 +241,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="4" scale="0"/>
                     </field>
-                    <field name="CA-QUANTITY-REQ" originalName="CA-QUANTITY-REQ" included="Y" path="catalog.CA-ORDER-REQUEST.CA-QUANTITY-REQ" srcLine="05 CA-QUANTITY-REQ PIC 9(3) USAGE DISPLAY.">
+                    <field name="CA-QUANTITY-REQ" originalName="CA-QUANTITY-REQ" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST.CA-QUANTITY-REQ" srcLine="05 CA-QUANTITY-REQ PIC 9(3) USAGE DISPLAY.">
                         <startPos>108</startPos>
                         <bytes>3</bytes>
                         <maxBytes>3</maxBytes>
@@ -250,7 +250,7 @@
                         </marshaller>
                         <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
                     </field>
-                    <field name="fill_3" originalName="fill_3" included="Y" path="catalog.CA-ORDER-REQUEST.fill_3" srcLine="05 FILLER PIC X(888) USAGE DISPLAY.">
+                    <field name="fill_3" originalName="fill_3" included="Y" path="DFH0XCP1.CA-ORDER-REQUEST.fill_3" srcLine="05 FILLER PIC X(888) USAGE DISPLAY.">
                         <startPos>111</startPos>
                         <bytes>888</bytes>
                         <maxBytes>888</maxBytes>

@@ -3,11 +3,11 @@ mappings:
 - body:
     mappings:
     - totalItems:
-        expression: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-REQUEST\".\"\
+        expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"\
           CA-ITEM-COUNT\""
     - items:
         foreach:
-          input: "$zosAssetResponse.commarea.catalog.\"CA-INQUIRE-REQUEST\".\"CA-CAT-ITEM\""
+          input: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"CA-CAT-ITEM\""
           mappings:
           - summary:
               mappings:
