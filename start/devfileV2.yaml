@@ -19,6 +19,11 @@ components:
             path: /zosConnect/designer/
             protocol: http
             targetPort: 9080
+          - exposure: public
+            name: zosconnect-ui-secure
+            path: /zosConnect/designer/
+            protocol: https
+            targetPort: 9443
         env:
           - name: ZCON_DESIGNER_PROJECT
             value: /projects/catalog-manager-api/start
