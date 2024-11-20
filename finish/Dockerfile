@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ibm-zcon-server:3.0.86
+FROM ibm-zcon-server:3.0.87
 
 # customise server.xml via dropins
 COPY --chown=1001:0 src/main/liberty/config /config/configDropins/overrides
