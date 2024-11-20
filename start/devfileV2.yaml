@@ -22,6 +22,6 @@ components:
         env:
           - name: ZCON_DESIGNER_PROJECT
             value: /projects/catalog-manager-api/start
-        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.86'
+        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.87'
         memoryLimit: 4927M
         mountSources: true
