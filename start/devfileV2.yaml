@@ -16,12 +16,12 @@ components:
       container:
         endpoints:
           - exposure: public
-            name: zosconnect-ui
+            name: zc-ui-http
             path: /zosConnect/designer/
             protocol: http
             targetPort: 9080
           - exposure: public
-            name: zosconnect-ui-secure
+            name: zc-ui-https
             path: /zosConnect/designer/
             protocol: https
             targetPort: 9080
