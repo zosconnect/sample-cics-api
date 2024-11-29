@@ -14,7 +14,7 @@ projects:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8@sha256:bc5d28c434089a312ab0944662e7702481ca4e898ef278cf61c0f683f35718df
+      image: registry.redhat.io/devspaces/udi-rhel8:latest
       memoryLimit: 3Gi
   - name: zosconnect
     container:
