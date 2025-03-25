@@ -1,7 +1,9 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - message:
+        required: false
+        nullable: false
         template: "Insufficient stock to complete order"
-version: 1

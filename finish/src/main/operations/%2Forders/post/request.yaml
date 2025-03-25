@@ -1,14 +1,25 @@
 ---
+version: "1.2"
 mappings:
 - commarea:
     mappings:
     - DFH0XCP1:
+        required: false
+        nullable: false
         mappings:
         - CA-REQUEST-ID:
+            required: false
+            nullable: false
             template: "01ORDR"
         - CA-ORDER-REQUEST:
+            required: false
+            nullable: false
             mappings:
-            - CA-QUANTITY-REQ:
-                expression: "$queryParameters.quantity"
             - CA-ITEM-REF-NUMBER:
+                required: false
+                nullable: false
                 expression: "$queryParameters.itemNumber"
+            - CA-QUANTITY-REQ:
+                required: false
+                nullable: false
+                expression: "$queryParameters.quantity"

@@ -1,7 +1,9 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - message:
+        required: false
+        nullable: false
         template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-RESPONSE-MESSAGE\"}}"
-version: 1

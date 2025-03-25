@@ -1,36 +1,23 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
-    - information:
-        mappings:
-        - itemReference:
-            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-ITEM-REF\""
-        - description:
-            template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}"
-        - cost:
-            template: "{{$number($zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\")}}"
-        - department:
-            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\""
-        - stock:
-            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\""
-        - onOrder:
-            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
-              .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\""
     - summary:
+        required: false
+        nullable: false
         mappings:
         - stock:
+            required: false
+            nullable: false
             template: "Department {{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\"}} has {{$zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\"}} '{{$zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}' in\
               \ stock."
         - orders:
+            required: false
+            nullable: false
             template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\"}} '{{$zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}' on\
@@ -39,4 +26,37 @@ mappings:
               \ value: ${{$number($zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
               .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\") * $number($zosAssetResponse.commarea.DFH0XCP1.\"\
               CA-INQUIRE-SINGLE\".\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\")}}"
-version: 1
+    - information:
+        required: false
+        nullable: false
+        mappings:
+        - itemReference:
+            required: false
+            nullable: false
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-ITEM-REF\""
+        - description:
+            required: false
+            nullable: false
+            template: "{{$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DESCRIPTION\"}}"
+        - cost:
+            required: false
+            nullable: false
+            template: "{{$number($zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-COST\")}}"
+        - department:
+            required: false
+            nullable: false
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"CA-SNGL-DEPARTMENT\""
+        - stock:
+            required: false
+            nullable: false
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"IN-SNGL-STOCK\""
+        - onOrder:
+            required: false
+            nullable: false
+            expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-SINGLE\"\
+              .\"CA-SINGLE-ITEM\".\"ON-SNGL-ORDER\""
