@@ -1,38 +1,62 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - totalItems:
+        required: false
+        nullable: false
         expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"\
           CA-ITEM-COUNT\""
     - items:
+        required: true
+        nullable: false
         foreach:
           input: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"CA-CAT-ITEM\""
           mappings:
           - summary:
+              required: false
+              nullable: false
               mappings:
               - stock:
+                  required: false
+                  nullable: false
                   template: "Department {{$item.\"CA-DEPARTMENT\"}} has {{$item.\"\
                     IN-STOCK\"}} '{{$item.\"CA-DESCRIPTION\"}}' in stock."
               - orders:
+                  required: false
+                  nullable: false
                   template: "{{$item.\"ON-ORDER\"}} '{{$item.\"CA-DESCRIPTION\"}}'\
                     \ on order at unit price of ${{$length($item.\"CA-COST\") = 0\
                     \ ? 0 : $number($item.\"CA-COST\")}}. Total order value: ${{$length($item.\"\
                     CA-COST\") = 0 ? 0 : $number($item.\"CA-COST\") * $number($item.\"\
                     ON-ORDER\")}}"
           - information:
+              required: false
+              nullable: false
               mappings:
               - itemReference:
+                  required: false
+                  nullable: false
                   expression: "$item.\"CA-ITEM-REF\""
               - description:
+                  required: false
+                  nullable: false
                   template: "{{$item.\"CA-DESCRIPTION\"}}"
               - cost:
+                  required: false
+                  nullable: false
                   template: "{{$length($item.\"CA-COST\") = 0 ? 0 : $number($item.\"\
                     CA-COST\")}}"
               - department:
+                  required: false
+                  nullable: false
                   expression: "$item.\"CA-DEPARTMENT\""
               - stock:
+                  required: false
+                  nullable: false
                   expression: "$item.\"IN-STOCK\""
               - onOrder:
+                  required: false
+                  nullable: false
                   expression: "$item.\"ON-ORDER\""
-version: 1

@@ -1,7 +1,9 @@
 ---
+version: "1.2"
 mappings:
 - body:
     mappings:
     - message:
+        required: false
+        nullable: false
         template: "Item not found"
-version: 1
