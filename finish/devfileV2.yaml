@@ -1,36 +1,36 @@
-schemaVersion: 2.3.0 
-metadata: 
+schemaVersion: 2.3.0
+metadata:
   name: sample-cics-api
-attributes: 
-  controller.devfile.io/storage-type: ephemeral 
-projects: 
-  - git: 
-      checkoutFrom: 
-        revision: main 
-      remotes: 
-        origin: 'https://github.com/zosconnect/sample-cics-api.git' 
+attributes:
+  controller.devfile.io/storage-type: ephemeral
+projects:
+  - git:
+      checkoutFrom:
+        revision: main
+      remotes:
+        origin: 'https://github.com/zosconnect/sample-cics-api.git'
     name: catalog-manager-api
-components: 
-  - name: tools 
-    container: 
-      image: registry.redhat.io/devspaces/udi-rhel8:latest 
-      memoryLimit: 3Gi 
-  - name: zosconnect 
-    container: 
-      endpoints: 
-        - exposure: public 
-          name: zc-ui-http 
-          path: /zosConnect/designer/ 
-          protocol: http 
-          targetPort: 9080 
-        - exposure: public 
-          name: zc-ui-https 
-          path: /zosConnect/designer/ 
-          protocol: https 
-          targetPort: 9080 
-      env: 
-        - name: ZCON_DESIGNER_PROJECT 
-          value: /projects/catalog-manager-api/finish 
-      image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.92' 
-      memoryLimit: 4927M 
+components:
+  - name: tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8:latest
+      memoryLimit: 3Gi
+  - name: zosconnect
+    container:
+      endpoints:
+        - exposure: public
+          name: zc-ui-http
+          path: /zosConnect/designer/
+          protocol: http
+          targetPort: 9080
+        - exposure: public
+          name: zc-ui-https
+          path: /zosConnect/designer/
+          protocol: https
+          targetPort: 9080
+      env:
+        - name: ZCON_DESIGNER_PROJECT
+          value: /projects/catalog-manager-api/finish
+      image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.92'
+      memoryLimit: 4927M
       mountSources: true
