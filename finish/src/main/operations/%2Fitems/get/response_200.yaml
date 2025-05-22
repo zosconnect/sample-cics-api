@@ -9,7 +9,7 @@ mappings:
         expression: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"\
           CA-ITEM-COUNT\""
     - items:
-        required: true
+        required: false
         nullable: false
         foreach:
           input: "$zosAssetResponse.commarea.DFH0XCP1.\"CA-INQUIRE-REQUEST\".\"CA-CAT-ITEM\""
