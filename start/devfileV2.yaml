@@ -1,4 +1,4 @@
-schemaVersion: 2.1.0
+schemaVersion: 2.3.0
 metadata:
   name: sample-cics-api
 attributes:
@@ -11,17 +11,26 @@ projects:
         origin: 'https://github.com/zosconnect/sample-cics-api.git'
     name: catalog-manager-api
 components:
-    - name: zosconnect
-      container:
-        endpoints:
-          - exposure: public
-            name: zosconnect-ui
-            path: /zosConnect/designer/
-            protocol: http
-            targetPort: 9080
-        env:
-          - name: ZCON_DESIGNER_PROJECT
-            value: /projects/catalog-manager-api/start
-        image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.93'
-        memoryLimit: 4927M
-        mountSources: true
+  - name: tools
+    container:
+      image: registry.redhat.io/devspaces/udi-rhel8:latest
+      memoryLimit: 3Gi
+  - name: zosconnect
+    container:
+      endpoints:
+        - exposure: public
+          name: zc-ui-http
+          path: /zosConnect/designer/
+          protocol: http
+          targetPort: 9080
+        - exposure: public
+          name: zc-ui-https
+          path: /zosConnect/designer/
+          protocol: https
+          targetPort: 9080
+      env:
+        - name: ZCON_DESIGNER_PROJECT
+          value: /projects/catalog-manager-api/start
+      image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.93'
+      memoryLimit: 4927M
+      mountSources: true
