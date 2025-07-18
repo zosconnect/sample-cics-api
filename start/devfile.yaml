@@ -21,9 +21,11 @@ components:
     env:
       - name: ZCON_DESIGNER_PROJECT
         value: /projects/catalog-manager-api/start
+      - name: zosconnect_remote_download_allowlist
+        value: BLOCK_ALL
     memoryLimit: 4927M
     type: dockerimage
-    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.94'
+    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.95'
     alias: zosconnect
   - id: redhat/vscode-yaml/latest
     type: chePlugin
