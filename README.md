@@ -7,7 +7,7 @@ The `start` directory contains an initial project layout which can be used as th
 
 ## Using the samples
 
-Follow the instructions in the [IBM Documentation](https://www.ibm.com/docs/en/zosconn/zos-connect/3.0?topic=tutorials-creating-your-first-cics-zos-connect-api) on how to use these examples.
+Follow the instructions in the [IBM Documentation](https://www.ibm.com/docs/en/zos-connect/3.0.0?topic=project-creating-cics-zos-connect-api) on how to use these examples.
 
 ## License
 
