@@ -25,7 +25,7 @@ components:
         value: BLOCK_ALL
     memoryLimit: 4927M
     type: dockerimage
-    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.97'
+    image: 'icr.io/zosconnect/ibm-zcon-designer:3.0.98'
     alias: zosconnect
   - id: redhat/vscode-yaml/latest
     type: chePlugin
